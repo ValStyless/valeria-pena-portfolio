@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins antialiased transition-colors duration-300;
+  }
+}
+/* ==========================================
+   SCROLLBAR GLOBAL PERSONALIZADO
+   ========================================== */
+
+/* Ancho y estructura de la barra */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Oculta los botones de flecha arriba/abajo por defecto */
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Fondo del carril (Track) */
+::-webkit-scrollbar-track {
+  background: #0a0e1a; /* Fondo oscuro integrado con tu tema */
+}
+
+/* Indicador deslizante (Thumb) */
+::-webkit-scrollbar-thumb {
+  background: rgba(45, 212, 191, 0.3); /* Color vp-teal translúcido */
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+::-webkit-scrollbar-thumb:hover {
+  background: #E6F9AF; /* Color vp-lime neón brillante */
+  box-shadow: 0 0 10px #E6F9AF;
+}
+
+/* Compatibilidad para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(45, 212, 191, 0.4) #0a0e1a;
+}
